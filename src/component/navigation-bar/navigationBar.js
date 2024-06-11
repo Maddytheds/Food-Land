@@ -132,7 +132,7 @@ export default function NavigationBar() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-miterlimit="10"
-                  stroke-width="2"
+                  // stroke-width="2"
                 ></circle>
               </g>
             </svg>

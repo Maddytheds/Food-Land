@@ -1,0 +1,56 @@
+.container-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.container-about-us h1 {
+    font-size: 19px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 90px;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+
+}
+
+.yellow-box {
+    width: 17.94rem;
+    height: 17.50rem;
+    background: #FFCC17;
+    border: none;
+    border-radius: 20px;
+}
+
+.description-about-us {
+
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 20px;
+    /* justify-content: space-between; */
+
+}
+
+.description-about-us h3 {
+
+    font-size: 35px;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 10px;
+
+
+
+}
+
+.description-about-us p {
+    font-size: 21px;
+    font-weight: 270;
+}
