@@ -1,0 +1,33 @@
+.services-card {
+    width: 280px;
+    text-align: center;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+
+.servies-card-container {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.services-card img {
+    object-fit: cover;
+}
+
+.services-card h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0px;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.services-card p {
+    margin-top: 0;
+    font-size: 13px;
+    color: #686868;
+    text-align: start;
+}

@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ------------auth_page-------------- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-signup {
+  width: 40vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* border: 1px solid black; */
+  padding: 20px;
+}
+
+.welcome {
+  color: #000000;
+  /* margin-top: 10px; */
+  margin-bottom: 70px;
+}
+
+.welcome h4,
+h1 {
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.welcome h4 {
+  font-size: 40px;
+  font-weight: 150;
+}
+
+.welcome h1 {
+  color: #f7bc00;
+  font-size: 60px;
+  font-weight: 300;
+  text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.42);
+}
+
+.auth-body p {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 90px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.auth-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.auth-button button {
+  height: 4vh;
+  width: 15vw;
+  border-radius: 13px;
+}
+
+.create-acc-btn {
+  background: #000;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.login-btn {
+  background: #f7bc00;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.auth-svg-img {
+  /* border: 1px solid black; */
+  height: 56.6vh;
+  width: 52.4vw;
+}
+
+/* -------------Signup-page------------- */
+
+.main-signup-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-img-section {
+  width: 60vw;
+  height: 70vh;
+}
+
+.text-img-section p {
+  font-size: 30px;
+}
+
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-feilds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 23vw;
+  height: 5vh;
+  margin-bottom: 37px;
+  border: none;
+  border-radius: 14px;
+  background-color: #d7d6d6;
+  padding-left: 17px;
+  padding-right: 20px;
+}
+
+.input-feilds input {
+  font-size: 1.1rem;
+}
+
+.input-feilds input,
+svg {
+  background-color: transparent;
+  border: none;
+  background: transparent;
+}
+
+.input-feilds::placeholder {
+  font-size: 1.1rem;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+}
+
+.privacy-policy input[type='radio'] {
+  appearance: none;
+  outline: 2px solid #009c4e;
+  width: 12px;
+  height: 12px;
+  border-radius: 30%;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.privacy-policy input[type='radio']:checked::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.signup-form button {
+  width: 23vw;
+  height: 5vh;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  background: #f7bc00;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.existing-acc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.existing-acc a {
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 5vw;
+}
+
+.existing-acc p {
+  font-size: 14px;
+  color: #f7bc00;
+  /* margin-right: 8rem; */
 }

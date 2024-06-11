@@ -1,0 +1,26 @@
+.home-container {
+  height: 70vh;
+
+}
+
+.services {
+  text-align: center;
+}
+
+.services p {
+  font-size: 25px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0px;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+
+.services h3 {
+  font-size: 35px;
+  font-weight: 260;
+  color: #F7BC00;
+  margin: 0px;
+  margin-left: -150px;
+
+}
