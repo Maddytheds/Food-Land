@@ -11,6 +11,7 @@ export default function NavigationBar() {
             <a
               href="https://www.republicworld.com/world-news/breaking-pakistan-bans-x-over-concerns-about-misuse/?amp=1"
               target="_blank"
+              rel="noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,11 @@ export default function NavigationBar() {
                 ></path>
               </svg>
             </a>
-            <a href="https://www.facebook.com/" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -45,7 +50,11 @@ export default function NavigationBar() {
                 ></path>
               </svg>
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
