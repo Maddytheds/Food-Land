@@ -1,0 +1,59 @@
+.footer-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 544px;
+    width: 100%;
+    background-color: #FFCC17;
+}
+
+.footer-picture {
+    height: 364px;
+    margin-top: 70px;
+}
+
+.footer-email {
+    width: 602px;
+}
+
+.discount-text h3 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 70px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.discount-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.discount-email input {
+    width: 308px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-right: 20px;
+    background: #FFFFFF;
+
+}
+
+.discount-email input::placeholder {
+    color: #a09f9f;
+}
+
+.discount-email button {
+    height: 50px;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    background: #222224;
+    color: #FFFFFF;
+
+
+
+}
