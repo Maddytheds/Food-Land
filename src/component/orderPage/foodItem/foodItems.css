@@ -1,0 +1,54 @@
+.foodItemsContainer {
+    width: 95%;
+    margin: 40px;
+    margin-top: -70px;
+}
+
+.foodItems {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    height: 349px;
+    width: 349px;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.foodItems h1 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.foodItemsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 150px;
+
+}
+
+.rattingFoodItems {
+    margin: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rattingFoodItems .fa-solid {
+    color: gold;
+}
+
+.rattingFoodItems .fa-regular {
+    color: gold;
+}

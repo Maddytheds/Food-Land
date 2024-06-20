@@ -4,6 +4,7 @@ import Auth from './component/auth-page/authpage';
 import Signup from './component/signup/signup';
 import Login from './component/login/login';
 import Home from './component/home/home';
+import OrderPage from './component/orderPage/ordersPage';
 // import HomeFooter from './component/homepage-footer/homepage-footer';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/lol" element={<HomeFooter />} /> */}
+          <Route path="/order" element={<OrderPage />} />
         </Routes>
       </Router>
     </div>
