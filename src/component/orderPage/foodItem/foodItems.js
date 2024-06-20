@@ -23,7 +23,7 @@ export default function FoodItems() {
       <div className="foodItemsDiv">
         {fooditems.map((item) => (
           <div key={item.id} className="foodItems">
-            <img src={item.img} alt={item.title} />
+            <img src={item.img} alt={item.name} />
             <div className="rattingFoodItems">
               <h1>{item.name}</h1>
               <div>
