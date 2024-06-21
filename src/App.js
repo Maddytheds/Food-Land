@@ -7,6 +7,7 @@ import Home from './component/home/home';
 import OrderPage from './component/orderPage/ordersPage';
 import CateringService from './component/foodServices/cateringService';
 import HomeCookForm from './component/foodServices/homeCooking/homeCook';
+import SettingPage from './component/settinggs/settingPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/order" element={<OrderPage />} />
+          <Route path="/settings" element={<SettingPage />} />
           <Route path="/services/catering" element={<CateringService />} />
           <Route path="/services/homecook" element={<HomeCookForm />} />
         </Routes>
