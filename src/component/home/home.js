@@ -5,6 +5,8 @@ import Services from '../services-card/services-card';
 import NavigationBar from '../../component/navigation-bar/navigationBar';
 import FoodSlider from '../food-slider/food-slider';
 import AboutUs from '../about-us/about-us';
+import ReviewSection from '../reviews-section/reviews-section';
+import HomeFooter from '../homepage-footer/homepage-footer';
 // import Sliders from '../popular-r ecipe/sliders';
 export default function Home() {
   return (
@@ -19,10 +21,19 @@ export default function Home() {
         <div>
           <Services />
         </div>
-
-        <FoodSlider />
+        <div className="food-slider-home">
+          <FoodSlider />
+        </div>
+        <div className="about-comp">
+          <AboutUs />
+        </div>
+        <div className="h1-wali-class">
+          <ReviewSection />
+        </div>
+        <div className="footer">
+          <HomeFooter />
+        </div>
       </div>
-      <AboutUs />
     </div>
   );
 }
