@@ -11,6 +11,7 @@
 
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 .upper-nav {
@@ -21,10 +22,7 @@ body {
   height: 10vh;
 
   margin: 0px;
-  /* margin-right:20px ;
-  margin-left: 20px;
-  margin-top: 20px; */
-  /* border: 1px solid black; */
+
 }
 
 .logo {
@@ -43,6 +41,11 @@ body {
   font-size: 17px;
   color: #f7bc00;
   font-style: italic;
+}
+
+.social-media-icons {
+  display: flex;
+
 }
 
 .social-media-icons svg {
@@ -103,10 +106,15 @@ button {
 }
 
 .lower-navbar-icons button {
+  font-size: 10px;
   width: 104px;
+
+  height: 28px;
   border: none;
+  color: black;
   background-color: #ffffff;
   border-radius: 10px;
+  margin: 0;
 }
 
 .lower-navbar-icons img {}

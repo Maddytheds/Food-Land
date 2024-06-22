@@ -1,16 +1,16 @@
-.cateringHeading {
+.homeCookHeading {
     width: 100%;
     height: 27vh;
     overflow: hidden;
 }
 
-.cateringHeading img {
+.homeCookHeading img {
     position: relative;
     width: 100%;
     object-fit: cover;
 }
 
-.cateringHeading h1 {
+.homeCookHeading h1 {
 
     position: absolute;
     top: 75px;
@@ -20,12 +20,12 @@
     color: #FFFFFF;
 }
 
-.cateringForm {
+.homeCookForm {
     width: 90vw;
     margin: auto;
 }
 
-.cateringInput {
+.homeCookInput {
 
     display: flex;
     justify-content: space-between;
@@ -34,19 +34,19 @@
     margin-top: 40px;
 }
 
-.cateringName,
-.cateringAddr,
-.cateringNumber,
-.cateringDate {
+.homeCookName,
+.homeCookAddr,
+.homeCookNumber,
+.homeCookDate {
     display: flex;
     flex-direction: column;
 
 }
 
-.cateringName input,
-.cateringAddr input,
-.cateringNumber input,
-.cateringDate input {
+.homeCookName input,
+.homeCookAddr input,
+.homeCookNumber input,
+.homeCookDate input {
     margin-top: 10px;
     background: #D7D6D6;
     width: 255px;
@@ -55,7 +55,7 @@
     padding-left: 20px;
 }
 
-.cateringDescription {
+.homeCookDescription {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -65,7 +65,7 @@
 
 }
 
-.cateringDescription textarea {
+.homeCookDescription textarea {
     background: #D7D6D6;
     height: 100%;
     border-radius: 15px;
@@ -74,7 +74,7 @@
 
 }
 
-.cateringForm button {
+.homeCookForm button {
     width: 400px;
     height: 62px;
     border: none;
@@ -84,7 +84,7 @@
     color: #FFFFFF;
 }
 
-.cateringDescription textarea::-webkit-resizer {
+.homeCookDescription textarea::-webkit-resizer {
     display: none;
 
 }

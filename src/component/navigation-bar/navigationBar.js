@@ -149,7 +149,6 @@ export default function NavigationBar() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-miterlimit="10"
-                    // stroke-width="2"
                   ></circle>
                 </g>
               </svg>
@@ -161,10 +160,10 @@ export default function NavigationBar() {
         <div className="lower-nav-flex">
           <div className="lower-navbar-routes">
             <a href="/home">Welcome</a>
-            <a href="/our-services">Our Service</a>
-            <a href="/about">About</a>
-            <a href="/orders">My Order</a>
-            <a href="/contact-us">Contact Us</a>
+            <a href="/order">Order</a>
+            <a href="/services/homecook">Home Cooking</a>
+            <a href="/services/catering">Catering</a>
+            <a href="/settings">Settings</a>
           </div>
           <div className="lower-navbar-icons">
             <img src="cart-shopping-solid.svg" alt="" />
