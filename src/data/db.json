@@ -5,28 +5,32 @@
       "fullName": "John Doe",
       "email": "johndoe@example.com",
       "password": "password123",
-      "confirmPassword": "password123"
+      "confirmPassword": "password123",
+      "addr": "Pakistan"
     },
     {
       "id": "2",
       "fullName": "Jane Smith",
       "email": "janesmith@example.com",
       "password": "mypassword",
-      "confirmPassword": "mypassword"
+      "confirmPassword": "mypassword",
+      "addr": "Pakistan"
     },
     {
       "id": "ea87",
       "fullName": "Hasnaat",
       "email": "hasnaat@test.com",
       "password": "Maddy",
-      "confirmPassword": "Maddy"
+      "confirmPassword": "Maddy",
+      "addr": "Pakistan"
     },
     {
       "id": "250a",
-      "fullName": "hasnaat123",
-      "email": "h@h.com",
-      "password": "112233",
-      "confirmPassword": "112233"
+      "fullName": "Ali",
+      "email": "Ali@Ali.com",
+      "password": "ali",
+      "confirmPassword": "ali",
+      "addr": "Pakistan pkli"
     }
   ]
 }
