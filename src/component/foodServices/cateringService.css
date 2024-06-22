@@ -1,0 +1,84 @@
+.cateringHeading {
+    width: 100%;
+    height: 27vh;
+    overflow: hidden;
+}
+
+.cateringHeading img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cateringHeading h1 {
+
+    position: absolute;
+    top: 75px;
+    left: 100px;
+    font-size: 50px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.cateringForm {
+    width: 90vw;
+    margin: auto;
+}
+
+.cateringInput {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.cateringName,
+.cateringAddr,
+.cateringNumber,
+.cateringDate {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cateringName input,
+.cateringAddr input,
+.cateringNumber input,
+.cateringDate input {
+    margin-top: 10px;
+    background: #D7D6D6;
+    width: 255px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.cateringDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 270px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.cateringDescription input {
+    background: #D7D6D6;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.cateringForm button {
+    width: 400px;
+    height: 62px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 90px;
+    background: #F7BC00;
+    color: #FFFFFF;
+}

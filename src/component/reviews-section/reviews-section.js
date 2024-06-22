@@ -18,7 +18,7 @@ export default function ReviewSection() {
       role: 'Web Developer',
       picture: '/reviewer pics/faizan.jpeg',
       text: 'Amazing experience! Highly recommend this service to everyone.',
-      rating: 4,
+      rating: 4.5,
     },
     {
       name: 'Farhan Aslam',
