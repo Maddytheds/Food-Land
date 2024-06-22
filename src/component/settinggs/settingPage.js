@@ -12,30 +12,29 @@ export default function SettingPage() {
     addr: '',
   });
 
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
   useEffect(() => {
-    const fetchUserData = async () => {
+    const fetchData = async () => {
       try {
-        const userId = localStorage.getItem('token');
-        const response = await axios.get(
-          `http://localhost:8001/users/${userId}`
-        );
-        setUserData(response.data);
+        const localData = localStorage.getItem('token');
+        if (localData) {
+          const response = await axios.get(
+            `http://localhost:8001/users/${localData}`
+          );
+          // console.log(response.data);
+          setUserData(response.data);
+        }
       } catch (error) {
-        console.log('Error fetching user data:', error);
-        setError('Failed to load user data.');
+        console.log(error);
       }
     };
 
-    fetchUserData();
+    fetchData();
   }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData((prevData) => ({
-      ...prevData,
+    setUserData((prev) => ({
+      ...prev,
       [name]: value,
     }));
   };
@@ -43,14 +42,10 @@ export default function SettingPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const userId = localStorage.getItem('token');
-      await axios.put(`http://localhost:8001/users/${userId}`, userData);
-      setSuccess('Profile updated successfully!');
-      setError('');
+      const localData = localStorage.getItem('token');
+      await axios.put(`http://localhost:8001/users/${localData}`, userData);
     } catch (error) {
-      console.error('Error updating profile:', error);
-      setError('Failed to update profile.');
-      setSuccess('');
+      console.log(error);
     }
   };
 
@@ -74,7 +69,7 @@ export default function SettingPage() {
                   type="text"
                   name="fullName"
                   id="fullName"
-                  value={userData.fullName}
+                  placeholder={userData.fullName}
                   onChange={handleChange}
                 />
                 <label htmlFor="email">Email</label>
@@ -82,7 +77,7 @@ export default function SettingPage() {
                   type="email"
                   name="email"
                   id="email"
-                  value={userData.email}
+                  placeholder={userData.email}
                   onChange={handleChange}
                 />
               </div>
@@ -93,7 +88,7 @@ export default function SettingPage() {
                     type="password"
                     name="password"
                     id="password"
-                    value={userData.password}
+                    placeholder={userData.password}
                     onChange={handleChange}
                   />
                   <label htmlFor="confirmPassword">Confirm Password</label>
@@ -101,7 +96,7 @@ export default function SettingPage() {
                     type="password"
                     name="confirmPassword"
                     id="confirmPassword"
-                    value={userData.confirmPassword}
+                    placeholder={userData.confirmPassword}
                     onChange={handleChange}
                   />
                 </div>
@@ -114,15 +109,13 @@ export default function SettingPage() {
                 id="addr"
                 cols="30"
                 rows="10"
-                value={userData.addr}
+                placeholder={userData.addr}
                 onChange={handleChange}
               ></textarea>
             </div>
             <button type="submit">Update Profile</button>
           </div>
         </form>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        {success && <p style={{ color: 'green' }}>{success}</p>}
       </div>
     </>
   );

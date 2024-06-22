@@ -1,4 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Auth() {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate('/login');
+  };
+  const handleSignup = () => {
+    navigate('/signup');
+  };
   return (
     <div className="auth-container">
       <div className="auth-page">
@@ -15,8 +24,12 @@ export default function Auth() {
             </p>
           </div>
           <div className="auth-button">
-            <button className="create-acc-btn">Create Account</button>
-            <button className="login-btn">Login</button>
+            <button onClick={handleSignup} className="create-acc-btn">
+              Create Account
+            </button>
+            <button onClick={handleLogin} className="login-btn">
+              Login
+            </button>
           </div>
         </div>
         <div className="auth-svg-img">

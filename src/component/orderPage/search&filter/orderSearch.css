@@ -15,7 +15,7 @@
 
 .orderSearch input {
     height: 70px;
-    width: 100%;
+    width: 450px;
     background-color: #D7D6D6;
     border-radius: 20px;
 
@@ -31,7 +31,7 @@
 .orderDropdown {
     border-radius: 16px;
     margin-top: 20px;
-    width: 100%;
+    width: 450px;
     height: 32vh;
     background: transparent;
     box-shadow:
@@ -41,6 +41,11 @@
         22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
         100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.orderDropdown button {
+    margin-top: 0;
+
 }
 
 .orderImg {
