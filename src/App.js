@@ -9,6 +9,7 @@ import CateringService from './component/foodServices/cateringService';
 import HomeCookForm from './component/foodServices/homeCooking/homeCook';
 import SettingPage from './component/settinggs/settingPage';
 import Protected from './component/protectedRoutes/protectedRoutes';
+import MapComponent from './component/mapPage/confirmation';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/settings" element={<SettingPage />} />
             <Route path="/services/catering" element={<CateringService />} />
             <Route path="/services/homecook" element={<HomeCookForm />} />
+            <Route path="/services/confirmation" element={<MapComponent />} />
           </Route>
         </Routes>
       </Router>
