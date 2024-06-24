@@ -8,6 +8,7 @@ import OrderPage from './component/orderPage/ordersPage';
 import CateringService from './component/foodServices/cateringService';
 import HomeCookForm from './component/foodServices/homeCooking/homeCook';
 import SettingPage from './component/settinggs/settingPage';
+import Protected from './component/protectedRoutes/protectedRoutes';
 
 function App() {
   return (
@@ -15,13 +16,15 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Auth />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/order" element={<OrderPage />} />
-          <Route path="/settings" element={<SettingPage />} />
-          <Route path="/services/catering" element={<CateringService />} />
-          <Route path="/services/homecook" element={<HomeCookForm />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route element={<Protected />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/order" element={<OrderPage />} />
+            <Route path="/settings" element={<SettingPage />} />
+            <Route path="/services/catering" element={<CateringService />} />
+            <Route path="/services/homecook" element={<HomeCookForm />} />
+          </Route>
         </Routes>
       </Router>
     </div>
