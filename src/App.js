@@ -10,6 +10,7 @@ import HomeCookForm from './component/foodServices/homeCooking/homeCook';
 import SettingPage from './component/settinggs/settingPage';
 import Protected from './component/protectedRoutes/protectedRoutes';
 import MapComponent from './component/mapPage/confirmation';
+import ItemDetailPage from './component/orderPage/foodDetail/foodDetailItem';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route element={<Protected />}>
             <Route path="/home" element={<Home />} />
             <Route path="/order" element={<OrderPage />} />
+            <Route path="/order/:id" element={<ItemDetailPage />} />
             <Route path="/settings" element={<SettingPage />} />
             <Route path="/services/catering" element={<CateringService />} />
             <Route path="/services/homecook" element={<HomeCookForm />} />

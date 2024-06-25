@@ -1,6 +1,7 @@
 {
   "food": [
     {
+      "key": "1as",
       "name": "Pizza",
       "category": "Starters",
       "rating": 1,
@@ -26,6 +27,7 @@
       ]
     },
     {
+      "key": "2as2",
       "name": "Burger",
       "category": "Resistors",
       "rating": 4.5,
@@ -71,6 +73,8 @@
       ]
     },
     {
+      "key": "1awqs",
+
       "name": "Sushi",
       "category": "Patisseries",
       "rating": 3.2,
@@ -96,6 +100,8 @@
       ]
     },
     {
+      "key": "1a23d2s",
+
       "name": "Spaghetti Carbonara",
       "category": "Starters",
       "rating": 4.6,
@@ -125,6 +131,8 @@
       ]
     },
     {
+      "key": "1ssad23as",
+
       "name": "Sushi Roll",
       "category": "Patisseries",
       "rating": 4.4,
@@ -150,6 +158,8 @@
       ]
     },
     {
+      "key": "asda321as",
+
       "name": "Pad Resistors",
       "category": "Resistors",
       "rating": 4.3,
@@ -183,6 +193,8 @@
       ]
     },
     {
+      "key": "1aasd2112s",
+
       "name": "Tacos",
       "category": "Patisseries",
       "rating": 4.7,
@@ -216,6 +228,8 @@
       ]
     },
     {
+      "key": "111qqaazas",
+
       "name": "Sushi Nigiri",
       "category": "Patisseries",
       "rating": 4.5,
@@ -231,6 +245,8 @@
       ]
     },
     {
+      "key": "1sadw12e2as",
+
       "name": "Lasagna",
       "category": "Starters",
       "rating": 4.6,
@@ -260,6 +276,8 @@
       ]
     },
     {
+      "key": "1aws",
+
       "name": "Ramen",
       "category": "Patisseries",
       "rating": 4.4,
@@ -289,6 +307,8 @@
       ]
     },
     {
+      "key": "1qwd11as",
+
       "name": "Tiramisu",
       "category": "Starters",
       "rating": 4.7,
@@ -322,6 +342,8 @@
       ]
     },
     {
+      "key": "11231qwas",
+
       "name": "Pho",
       "category": "Garnitures",
       "rating": 4.5,
@@ -347,6 +369,8 @@
       ]
     },
     {
+      "key": "1asd22mmas",
+
       "name": "Paella",
       "category": "Garnitures",
       "rating": 4.6,
@@ -409,6 +433,8 @@
       ]
     },
     {
+      "key": "1mlkoas",
+
       "name": "Fish and Chips",
       "category": "Resistors",
       "rating": 4.6,
@@ -438,6 +464,8 @@
       ]
     },
     {
+      "key": "1a0okmkokmns",
+
       "name": "Pho Ga",
       "category": "Patisseries",
       "rating": 4.3,
@@ -463,6 +491,8 @@
       ]
     },
     {
+      "key": "1a1122ees",
+
       "name": "Moussaka",
       "category": "Starters",
       "rating": 4.7,
@@ -488,6 +518,8 @@
       ]
     },
     {
+      "key": "1a3412s",
+
       "name": "Gyoza",
       "category": "Garnitures",
       "rating": 4.4,
@@ -509,6 +541,8 @@
       ]
     },
     {
+      "key": "1as2123ersdxc",
+
       "name": "Ceviche",
       "category": "Garnitures",
       "rating": 4.5,
@@ -536,6 +570,47 @@
           "image": "https://images.pexels.com/photos/784633/pexels-photo-784633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
       ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "addr": "Pakistan"
+    },
+    {
+      "id": "2",
+      "fullName": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "mypassword",
+      "confirmPassword": "mypassword",
+      "addr": "Pakistan"
+    },
+    {
+      "id": "ea87",
+      "fullName": "Hasnaat",
+      "email": "hasnaat@test.com",
+      "password": "Maddy",
+      "confirmPassword": "Maddy",
+      "addr": "Pakistan"
+    },
+    {
+      "id": "250a",
+      "fullName": "haj",
+      "email": "zawadiftikhar@gmail.com",
+      "password": "112",
+      "confirmPassword": "112",
+      "addr": "Bedian road lidher,  haider chowk ,near DHA phase 6 Lahore"
+    },
+    {
+      "id": "4c7c",
+      "fullName": "Farhan Aslam",
+      "email": "farhan@lm.com",
+      "password": "farhan@lm.com",
+      "confirmPassword": "farhan@lm.com"
     }
   ]
 }

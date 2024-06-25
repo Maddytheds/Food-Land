@@ -11,6 +11,7 @@
 
 .searchAccordion {
     width: 450px;
+    height: 300px;
 }
 
 .orderSearch input {
@@ -32,7 +33,7 @@
     border-radius: 16px;
     margin-top: 20px;
     width: 450px;
-    height: 32vh;
+    /* height: 32vh; */
     background: transparent;
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
