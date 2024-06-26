@@ -1,10 +1,16 @@
-// src/components/MapComponent.js
 import React, { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
+import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 import './confirmation.css';
+import { useNavigate } from 'react-router-dom';
 
 const MapComponent = () => {
+  const history = useNavigate();
   const [userLocation, setUserLocation] = useState(null);
+  const [startLocation, setStartLocation] = useState('');
+  const [endLocation, setEndLocation] = useState('');
+  const [estimatedTime, setEstimatedTime] = useState(null);
 
   useEffect(() => {
     mapboxgl.accessToken =
@@ -13,7 +19,7 @@ const MapComponent = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-74.5, 40], // Default center
+      center: [-74.5, 40],
       zoom: 9,
     });
 
@@ -22,8 +28,30 @@ const MapComponent = () => {
       new mapboxgl.Marker().setLngLat(userLocation).addTo(map);
     }
 
+    const directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      unit: 'metric',
+      profile: 'mapbox/driving',
+    });
+
+    directions.on('route', (event) => {
+      if (event.route && event.route[0] && event.route[0].duration) {
+        const durationInSeconds = event.route[0].duration;
+        const hours = Math.floor(durationInSeconds / 3600);
+        const minutes = Math.floor((durationInSeconds % 3600) / 60);
+        setEstimatedTime({ hours, minutes });
+      }
+    });
+
+    map.addControl(directions, 'top-left');
+
+    if (startLocation && endLocation) {
+      directions.setOrigin(startLocation);
+      directions.setDestination(endLocation);
+    }
+
     return () => map.remove();
-  }, [userLocation]);
+  }, [userLocation, startLocation, endLocation]);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -42,6 +70,17 @@ const MapComponent = () => {
     }
   }, []);
 
+  const handleStartLocationChange = (event) => {
+    setStartLocation(event.target.value);
+  };
+
+  const handleEndLocationChange = (event) => {
+    setEndLocation(event.target.value);
+  };
+  const handleConfirm = () => {
+    alert('Location Confirm');
+    history('/home');
+  };
   return (
     <div className="confirmContainer">
       <div className="cateringHeading">
@@ -55,15 +94,32 @@ const MapComponent = () => {
         <div className="searchLocation">
           <div className="searchLocationInner">
             <div className="deliverTo">
-              <label htmlFor="deliverTo">Deliver to</label>
-              <input type="text" name="deliverTo" />
+              <label htmlFor="startLocation">Your Location</label>
+              <input
+                type="text"
+                name="startLocation"
+                value={startLocation}
+                onChange={handleStartLocationChange}
+              />
             </div>
             <div className="deliverTo">
-              <label htmlFor="deliveryDuration">Delivery Duration</label>
-              <input type="text" name="deliveryDuration" />
+              <label htmlFor="endLocation">End Location</label>
+              <input
+                type="text"
+                name="endLocation"
+                value={endLocation}
+                onChange={handleEndLocationChange}
+              />
             </div>
-            <div className="deliveryButtom">
-              <button>Confirm Order</button>
+            {estimatedTime && (
+              <div className="estimatedTimeDisplay">
+                Estimated Time: {estimatedTime.hours}h {estimatedTime.minutes}m
+              </div>
+            )}
+            <div className="deliveryButton">
+              <button type="button" onClick={handleConfirm}>
+                Confirm Location
+              </button>
             </div>
           </div>
         </div>
