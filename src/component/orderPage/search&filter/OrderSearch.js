@@ -3,13 +3,11 @@ import './orderSearch.css';
 
 export default function OrderSearch({ setFilterValue, foodItems }) {
   const [toggle, setToggle] = useState(false);
-  // console.log('this is prop', foodItems);
 
   function itHandleClicks(e) {
     e.preventDefault();
     const val = e.currentTarget.getAttribute('data-value');
     setFilterValue(val);
-    // console.log(`category: ${val}`);
   }
 
   return (

@@ -16,7 +16,7 @@ export default function HomeFooter() {
       )
       .then(
         (result) => {
-          console.log('Email successfully sent!', result.text);
+          alert('Email successfully sent!');
         },
         (error) => {
           console.error('Email sending failed:', error.text);

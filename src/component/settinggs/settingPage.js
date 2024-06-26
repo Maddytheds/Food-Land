@@ -20,11 +20,10 @@ export default function SettingPage() {
           const response = await axios.get(
             `http://localhost:8001/users/${localData}`
           );
-          // console.log(response.data);
           setUserData(response.data);
         }
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
 
@@ -45,7 +44,7 @@ export default function SettingPage() {
       const localData = localStorage.getItem('token');
       await axios.put(`http://localhost:8001/users/${localData}`, userData);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

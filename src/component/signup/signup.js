@@ -36,7 +36,6 @@ export default function Signup() {
         'http://localhost:8001/users',
         signupData
       );
-      console.log(response.data);
 
       setSignupData({
         fullName: '',

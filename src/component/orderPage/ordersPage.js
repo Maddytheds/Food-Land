@@ -7,7 +7,6 @@ import axios from 'axios';
 export default function OrderPage() {
   const [foodItems, setFoodItems] = useState([]);
   const [filterValue, setFilterValue] = useState('');
-  // console.log(foodItems);
   const filterFoodData = foodItems.filter((e) => e?.category === filterValue);
 
   useEffect(() => {

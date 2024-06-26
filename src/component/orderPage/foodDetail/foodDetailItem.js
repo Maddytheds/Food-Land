@@ -12,7 +12,6 @@ export default function ItemDetailPage() {
     const fetchItem = async () => {
       try {
         const response = await axios(`http://localhost:8000/food/${id}`);
-        console.log(response);
         setItem(response.data);
       } catch (error) {
         console.error(
@@ -41,7 +40,7 @@ export default function ItemDetailPage() {
       )
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          alert('Your order is confirmed');
         },
         (error) => {
           console.error('FAILED...', error);
