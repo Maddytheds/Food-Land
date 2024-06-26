@@ -1,0 +1,112 @@
+.mapContainer {
+    height: 50vh;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.confirmContainer .cateringHeading {
+    height: 23vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.confirmContainer .cateringHeading img {
+    max-height: 100%;
+}
+
+.searchLocation {
+    z-index: 12;
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    margin: 0;
+    z-index: 12;
+    width: 100%;
+}
+
+.searchLocationInner {
+    z-index: 12;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.deliverTo,
+.deliveryDuration {
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.deliverTo input,
+.deliveryDuration input {
+    height: 58px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background: #E5E5E5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.deliverTo label,
+.deliveryDuration label {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.deliveryButtom {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryButtom button {
+    height: 58px;
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    background-color: #F7BC00;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.deliveryButtom button:hover {
+    background-color: #ffc400;
+    color: #ffffff;
+}
+
+.mapboxgl-ctrl-top-left {
+    display: none;
+}
+
+.estimatedTimeDisplay {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}

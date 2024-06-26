@@ -25,7 +25,6 @@ export default function Login() {
       );
       if (user) {
         let id = user.id;
-        console.log(id);
         localStorage.setItem('token', id);
         setSuccess('Login successful!');
         setError('');

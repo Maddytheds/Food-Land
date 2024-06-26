@@ -1,64 +1,79 @@
 import { useState } from 'react';
 import './orderSearch.css';
-export default function OrderSearch() {
+
+export default function OrderSearch({ setFilterValue, foodItems }) {
   const [toggle, setToggle] = useState(false);
+
+  function itHandleClicks(e) {
+    e.preventDefault();
+    const val = e.currentTarget.getAttribute('data-value');
+    setFilterValue(val);
+  }
 
   return (
     <div className="orderFilter">
       <div className="searchAccordion">
-        <div className="orderSearch">
+        {/* <div className="orderSearch">
           <form action="">
             <input type="text" placeholder="Search" />
           </form>
-        </div>
+        </div> */}
         <div className="orderDropdown">
           <button
             id="dropdownDefaultButton"
             data-dropdown-toggle="dropdown"
-            class="text-white bg-[#F7BC00] hover:bg-[#F7BC08] font-medium rounded-t-2xl text-lg px-5 py-2.5 text-center inline-flex items-center dark:bg-[#F7BC00] dark:hover:bg-[#F7BC00] w-[100%] h-[70px] "
+            className="text-white bg-[#F7BC00] hover:bg-[#F7BC08] font-medium rounded-t-2xl text-lg px-5 py-2.5 text-center inline-flex items-center dark:bg-[#F7BC00] dark:hover:bg-[#F7BC00] w-[100%] h-[70px]"
             type="button"
             onClick={() => setToggle(!toggle)}
           >
-            Category{' '}
+            Category
           </button>
 
           <div
             id="dropdown"
-            class={`z-10 ${toggle ? 'block' : 'block'} bg-white divide-y divide-gray-100 rounded-b-2xl shadow w- dark:bg-[#FFFFFF] `}
+            className={`z-10 ${toggle ? 'block' : 'block'} bg-white divide-y divide-gray-100 rounded-b-2xl shadow w- dark:bg-[#FFFFFF]`}
           >
             <ul
-              class="py-2 text-[18px]  font-medium text-[#000000] dark:text-[#000000] h-[100%] flex flex-col gap-4"
+              className="py-2 text-[18px] font-medium text-[#000000] dark:text-[#000000] h-[100%] flex flex-col gap-4"
               aria-labelledby="dropdownDefaultButton"
             >
-              <li>
+              <li onClick={itHandleClicks} data-value="Starters">
                 <a
-                  href="/order/category"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
                 >
+                  {' '}
+                  {/* Add href="#" */}
                   Starters
                 </a>
               </li>
-              <li>
+              <li onClick={itHandleClicks} data-value="Resistors">
                 <a
-                  href="/order/category"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
                 >
+                  {' '}
+                  {/* Add href="#" */}
                   Resistors
                 </a>
               </li>
-              <li>
+              <li onClick={itHandleClicks} data-value="Patisseries">
                 <a
-                  href="/order/category"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
                 >
+                  {' '}
+                  {/* Add href="#" */}
                   Patisseries
                 </a>
               </li>
-              <li>
+              <li onClick={itHandleClicks} data-value="Garnitures">
                 <a
-                  href="/order/category"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-white"
                 >
+                  {' '}
+                  {/* Add href="#" */}
                   Garnitures
                 </a>
               </li>

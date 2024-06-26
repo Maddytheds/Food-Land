@@ -8,7 +8,6 @@ export default function CateringForm() {
       e.target,
       'JMmb3izo1Q_u5qjgf'
     );
-    console.log();
   };
 
   return (

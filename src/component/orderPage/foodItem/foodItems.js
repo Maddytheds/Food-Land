@@ -1,30 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './foodItems.css';
-import axios from 'axios';
+import { Link } from 'react-router-dom'; // Import Link
 
-export default function FoodItems() {
-  const [fooditems, setFooditems] = useState([]);
-
-  useEffect(() => {
-    const fooditem = async () => {
-      try {
-        const response = await axios('http://localhost:8000/food');
-        setFooditems(response.data);
-        console.log(response);
-      } catch (error) {
-        console.log('error', error);
-      }
-    };
-    fooditem();
-  }, []);
-
+export default function FoodItems({ filterFoodData }) {
   return (
     <div className="foodItemsContainer">
       <div className="foodItemsDiv">
-        {fooditems.map((item) => (
-          <div key={item.id} className="foodItems">
+        {filterFoodData.map((item, index) => (
+          <Link to={`/order/${item.id}`} id={index} className="foodItems">
             <img src={item.img} alt={item.name} />
-            <div className="rattingFoodItems">
+            <div className="ratingFoodItems">
               <h1>{item.name}</h1>
               <div>
                 <i className="fa-solid fa-star"></i>
@@ -34,7 +19,7 @@ export default function FoodItems() {
                 <i className="fa-regular fa-star"></i>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -33,10 +33,9 @@ export default function Signup() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8001/users',
+        'http://localhost:8000/users',
         signupData
       );
-      console.log(response.data);
 
       setSignupData({
         fullName: '',
